@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP6 - Mini-Application Web</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <i class="fas fa-calculator"></i>
+                <h1>Calculatrice Interactive</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class="active"><i class="fas fa-home"></i> Accueil</a></li>
+                    <li><a href="info.php"><i class="fas fa-info-circle"></i> Info PHP</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h2>TP6 - Mini-Application Web Avancée</h2>
+                <p>HTML + CSS + JavaScript & Introduction au PHP</p>
+            </div>
+        </section>
+
+        <div class="content-container">
+            <section class="calculator-section">
+                <h2><i class="fas fa-calculator"></i> Calculatrice Interactive</h2>
+                <div class="calculator-card">
+                    <form id="calculator-form">
+                        <div class="form-group">
+                            <label for="numberA">
+                                <i class="fas fa-hashtag"></i> Nombre A
+                            </label>
+                            <input type="number" id="numberA" step="any" placeholder="Entrez un nombre" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="numberB">
+                                <i class="fas fa-hashtag"></i> Nombre B
+                            </label>
+                            <input type="number" id="numberB" step="any" placeholder="Entrez un nombre" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="operation">
+                                <i class="fas fa-cogs"></i> Opération
+                            </label>
+                            <select id="operation">
+                                <option value="add">Addition (+)</option>
+                                <option value="subtract">Soustraction (−)</option>
+                                <option value="multiply">Multiplication (×)</option>
+                                <option value="divide">Division (÷)</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" id="calculate-btn">
+                            <i class="fas fa-calculator"></i> Calculer
+                        </button>
+                    </form>
+
+                    <div class="result-section">
+                        <h3><i class="fas fa-poll"></i> Résultat</h3>
+                        <div id="result" class="result-display">
+                            <p>Le résultat apparaîtra ici...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="error-section">
+                    <h3><i class="fas fa-exclamation-triangle"></i> Messages d'erreur</h3>
+                    <div id="error-messages"></div>
+                </div>
+            </section>
+
+            <section class="history-section">
+                <h2><i class="fas fa-history"></i> Historique des opérations</h2>
+                <div class="history-card">
+                    <div class="history-header">
+                        <span>Opération</span>
+                        <span>Résultat</span>
+                        <span>Date</span>
+                    </div>
+                    <div id="history-list" class="history-list">
+                        <p class="empty-history">Aucune opération effectuée</p>
+                    </div>
+                    <div class="history-controls">
+                        <button id="clear-history" class="secondary-btn">
+                            <i class="fas fa-trash"></i> Effacer l'historique
+                        </button>
+                        <button id="export-history" class="secondary-btn">
+                            <i class="fas fa-download"></i> Exporter
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-info">
+                <h3>TP6 - Mini-Application Web</h3>
+                <p>Technologies utilisées: HTML5, CSS3, JavaScript, PHP</p>
+                <p>Année 2025-2026 |  FSSM |  Module: programmation web2</p>
+            </div>
+            <div class="footer-links">
+                <a href="index.html"><i class="fas fa-calculator"></i> Calculatrice</a>
+                <a href="info.php"><i class="fas fa-code"></i> Page PHP</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p> TP6 - Mini-Application Web Avancée</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
